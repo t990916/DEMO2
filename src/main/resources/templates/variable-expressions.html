@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmls:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div th:object="${car}">
+名前：<span th:text="${name}">dummy</span>
+<h2 th:text="#{message}">dummy</h2>
+<form th:object="${car}"></form>
+<form th:action="@{/vatiable-expressions}" method="post">
+    <span th:text="#{message}">ここにメッセージが入ります</span> 
+    <span th:text="#{message.name}">ここに名前が入ります</span>: <input type="text" name="name">
+    <button th:text="#{message.buttonName}">ここにボタン名が入ります</button>
+<!-- 車の名前：<input type="text" th:field="*{name}"><br> -->
+<!-- 車のスピード：<input type="text" th:field="*{speed}"><br> -->
+<!-- 車のガソリン情報：<span th:text="${car.gas}">dummy2</span> -->
+</div>
+</form>
+</body>
+</html>

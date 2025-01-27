@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>アイテム一覧</title>
+</head>
+<body>
+    <h1>アイテム一覧</h1>
+    <ul>
+        <li th:each="item : ${itemList}">
+            名前: <span th:text="${item.name}"></span><br>
+            値段: <span th:text="${item.price}"></span> 円<br>
+            色: <span th:text="${item.color}"></span>
+        </li>
+    </ul>
+</body>
+</html>
