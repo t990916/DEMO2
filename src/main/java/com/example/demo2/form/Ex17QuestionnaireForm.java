@@ -1,15 +1,20 @@
-package com.example.demo2.domain;
+package com.example.demo2.form;
 
 import java.util.List;
 
-public class User {
+public class Ex17QuestionnaireForm {
 
+    
     private Integer id;
     private String name;
     private String email;
-    private String password;
+    private String gender;
     private List<String> hobbyList;
-    
+    private String language;
+    private String comment;
+
+
+
     public Integer getId() {
         return id;
     }
@@ -28,11 +33,11 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getPassword() {
-        return password;
+    public String getGender() {
+        return gender;
     }
-    public void setPassword(String password) {
-        this.password = password;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
     public List<String> getHobbyList() {
         return hobbyList;
@@ -40,7 +45,17 @@ public class User {
     public void setHobbyList(List<String> hobbyList) {
         this.hobbyList = hobbyList;
     }
+    public String getLanguage() {
+        return language;
+    }
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+    public String getComment() {
+        return comment;
+    }
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
-    
-   
 }

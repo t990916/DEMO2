@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>アンケートフォーム</h2>
+<form th:action="@{/questionnaire/create2}" method="post">
+    名前：<br>
+    <input type="text" name="name"><br>
+    メール：<br>
+    </be><input type="text" name="email"><br>
+    性別：<br>
+    <div>
+        <input type="radio" name="gender" value="2">男</input>
+    </div>
+    <div>
+        <input type="radio" name="gender" value="2">女</input>
+    </div><br><br>
+    趣味：
+    <div th:each="hobby : ${hobbyMap}">
+        <input type="checkbox" 
+               name="hobbyList" 
+               th:value="${hobby.key}" 
+               th:text="${hobby.value}">
+    </div><br>
+
+    好きな言語：<br>
+    <select id="language" name="language">
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="csharp">C#</option>
+        <option value="ruby">Ruby</option>
+    </select><br><br>
+
+    <label for="comment">その他：</label><br>
+<textarea id="comment" name="comment" rows="7" cols="60" placeholder="コメントを入力してください"></textarea><br>
+
+<button>送信</button>
+
+</form>
+</body>
+</html>
